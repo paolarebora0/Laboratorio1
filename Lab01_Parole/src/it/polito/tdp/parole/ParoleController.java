@@ -41,17 +41,18 @@ public class ParoleController {
     @FXML
     void doInsert(ActionEvent event) {
     	
-    	String parola = txtParola.getText();
-    	elenco.addParola(parola);
+//    	String parola = txtParola.getText();
+    	elenco.addParola(txtParola.getText());
     	String risultato = "";
     	
     	txtResult.clear();
     	
     	for(String p: elenco.getElenco()) {
-    		risultato = p + "\n";
+    		risultato += p + "\n";
     	}
     	
-    	txtResult.appendText(risultato);
+    	txtParola.clear();
+    	txtResult.setText(risultato);
     	
     	
     }
