@@ -43,14 +43,23 @@ public class ParoleController {
     	
     	String parola = txtParola.getText();
     	elenco.addParola(parola);
-    	elenco.getElenco();
+    	String risultato = "";
+    	
+    	txtResult.clear();
+    	
+    	for(String p: elenco.getElenco()) {
+    		risultato = p + "\n";
+    	}
+    	
+    	txtResult.appendText(risultato);
     	
     	
     }
     
     @FXML
     void doReset(ActionEvent event) {
-    	// TODO
+    	txtResult.clear();
+    	elenco.reset();
     }
 
     @FXML // This method is called by the FXMLLoader when initialization is complete
