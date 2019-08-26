@@ -40,7 +40,10 @@ public class ParoleController {
 
     @FXML
     void doInsert(ActionEvent event) {
-    	// TODO
+    	
+    	String parola = txtParola.getText();
+    	
+    	
     }
     
     @FXML
