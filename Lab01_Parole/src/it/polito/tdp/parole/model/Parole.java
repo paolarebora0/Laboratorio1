@@ -1,5 +1,6 @@
 package it.polito.tdp.parole.model;
 
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -15,13 +16,13 @@ public class Parole {
 		lista.add(p);
 	}
 	
-	public List<String> getElenco() {
-		//TODO
+	public List<String> getElenco() {		
+		Collections.sort(lista);
 		return lista;
 	}
 	
 	public void reset() {
-		// TODO
+		lista.clear();
 	}
 
 }

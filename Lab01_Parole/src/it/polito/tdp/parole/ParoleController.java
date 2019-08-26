@@ -42,6 +42,8 @@ public class ParoleController {
     void doInsert(ActionEvent event) {
     	
     	String parola = txtParola.getText();
+    	elenco.addParola(parola);
+    	elenco.getElenco();
     	
     	
     }
